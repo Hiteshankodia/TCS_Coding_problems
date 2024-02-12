@@ -1,0 +1,17 @@
+array = [1,2,-3,0,-4,-5]
+product = 1 
+for i in range(len(array)):
+    list1 = []
+    a = 1 
+    for j in range(i,len(array)):
+        list1.append(array[j])
+        a *= array[j] 
+        if a > product:
+            product = a 
+    
+print(product)            
+#Here we are performing brute force approch for the problem.             
+            
+    
+        
+        
