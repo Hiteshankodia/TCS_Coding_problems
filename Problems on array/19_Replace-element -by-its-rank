@@ -1,0 +1,19 @@
+dict_ = {}
+list1 = [20,15,26,2,98,6]
+
+count = 1 
+sort_list = []
+sort_list += list1 
+sort_list.sort()
+
+for i in sort_list:
+    dict_[i] = count
+    count += 1 
+    
+result = []    
+for i in list1:
+    result.append(dict_[i])
+print(list1)
+print(result)
+    
+    
