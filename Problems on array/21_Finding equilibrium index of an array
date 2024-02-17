@@ -1,0 +1,19 @@
+'''Input: nums = [0, 2,3,-1,8,4]
+Output: 3
+Explanation: The sum of the numbers before index 3 is: 2 + 3 + -1 = 4
+The sum of the numbers after index 3 is: 4 = 4'''
+
+nums = [1,-1,4]
+count_l = 0 
+count_r = 0 
+nums.append(0)
+nums = nums[::-1]
+for i in range(len(nums)):
+    count_l += nums[i]
+    for j in range(i+2, len(nums)):
+        count_r += nums[j]
+        
+    if count_r == count_l:
+        print(nums[i+1])
+    count_r = 0 
+    count_l = 0 
